@@ -17,7 +17,7 @@ $handle=sub{
 
 	$dtext=&descape($ref->{'text'});
 	# return if the tweet does not contain jokes
-	return 0 if (($dtext !~ /COMA/i) && ($dtext !~ /C○MA/i));
+	return 0 if (($dtext !~ /COMA/i) && ($dtext !~ /C○MA/i) && ($dtext !~ /独楽/i));
 
 	# disabled due to status duplicate issue
 	## do silent reply
