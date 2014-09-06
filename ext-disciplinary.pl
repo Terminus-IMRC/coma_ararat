@@ -34,8 +34,10 @@ $handle=sub{
 	&updatest($str, 1, 0, undef, $ref->{'id_str'});
 
 	# send DM to @n_IMRC with its tweeter name and its tweet ID
-	$str="D n_IMRC disp: \@$sn: http://twitter.com/$sn/status/$ref->{'id_str'}";
-	&updatest($str);
+	unless("${sn}" eq 'n_IMRC'){
+		$str="D n_IMRC disp: \@$sn: http://twitter.com/$sn/status/$ref->{'id_str'}";
+		&updatest($str);
+	}
 
 	&defaulthandle($ref);
 	return 1;
