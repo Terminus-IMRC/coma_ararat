@@ -1,4 +1,11 @@
 #!/usr/bin/env sh
+which ttytter >/dev/null 2>/dev/null
+RET=$?
+if test $RET -ne 0; then
+	echo "error: ttytter is not found"
+	exit $RET
+fi
+
 DIR=~/.totweet/totweet
 
 mkdir -p $DIR
