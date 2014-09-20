@@ -15,7 +15,8 @@ while true; do
 	sleep 3
 	for f in $(\ls -1trA); do
 		if test -s $f; then
-			ttytter -keyf=coma_ararat -status="$(cat $f)" -hold
+			ST="$(cat $f)"
+			ttytter -keyf=coma_ararat -status="$ST" -hold &
 		fi
 		rm -f $f
 	done
