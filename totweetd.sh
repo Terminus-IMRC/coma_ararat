@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 which ttytter >/dev/null 2>/dev/null
 RET=$?
 if test $RET -ne 0; then
