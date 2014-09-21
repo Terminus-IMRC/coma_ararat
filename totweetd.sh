@@ -15,7 +15,7 @@ cd $DIR
 while true; do
 	sleep 3
 	for f in $(\ls -1trA); do
-		if test -s $f; then
+		if test -f $f -a -s $f; then
 			ST="$(cat $f)"
 			(
 				ttytter -keyf=coma_ararat -status="$ST" -hold >/dev/null
