@@ -18,7 +18,7 @@ while true; do
 		if test -s $f; then
 			ST="$(cat $f)"
 			(
-				ttytter -keyf=coma_ararat -status="$ST" -hold >/dev/null
+				ttytter -keyf=coma_ararat -status="$ST" >/dev/null
 				RET=$?
 				if test $RET -ne 0; then
 					echo "ttytter exited with status $RET" >&2
