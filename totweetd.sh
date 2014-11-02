@@ -23,7 +23,7 @@ while true; do
 				if test $RET -ne 0; then
 					echo "ttytter exited with status $RET" >&2
 					REST="$(mktemp --tmpdir=$FDIR)"
-					chmod 666 $REST
+					chmod 644 $REST
 					echo "$ST" >$REST
 					echo "the tweet is restored to $REST (original filename is $f)" >&2
 				fi
